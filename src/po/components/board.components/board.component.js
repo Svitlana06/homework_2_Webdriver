@@ -76,8 +76,13 @@ class BoardComponent extends BaseComponent {
     get newBoardExistingChecking() {
         return $('//h1[@data-testid="board-name-display"]')
     }
+    get searchSetting() {
+        return $('//input[@placeholder="Пошук"]')
+    }
+    get resultsOpeningBtn() {
+        return $('//span[text()="Переглянути всі результати"]')
 
-    
+    }
 
     
 

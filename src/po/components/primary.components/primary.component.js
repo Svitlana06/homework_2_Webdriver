@@ -13,11 +13,5 @@ class PrimaryComponent extends BaseComponent {
     get signingUpBtn() {
         return $('//*[contains(@aria-label, "Sign up")]')
     }
-    get searchSetting() {
-        return $('//input[@placeholder="Пошук"]')
-    }
-    get resultsOpeningBtn() {
-        return $('//span[text()="Переглянути всі результати"]')
-    }
 }
 module.exports = PrimaryComponent;
