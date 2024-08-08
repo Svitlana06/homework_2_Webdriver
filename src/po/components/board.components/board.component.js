@@ -35,7 +35,7 @@ class BoardComponent extends BaseComponent {
         return $('//button[@data-testid="list-composer-button"]')
     }
     get newListSetting() {
-        return $('//textarea[contains(@placeholder, "Увести назву")]')
+        return $('//textarea[contains(@placeholder, "Введіть назву")]')
     }
     get newListAddingBtn() {
         return $('//button[text()="Додати список"]')
@@ -44,7 +44,7 @@ class BoardComponent extends BaseComponent {
         return $(`//ol[@id="board"]//h2[text()="${valuesForFields.newListName}"]`)
     }
     get newCardAdding() {
-        return $('//li[@data-list-id="66ab694d1489095d44e24024"]//div[@data-testid="list-footer"]')
+        return $('//li[@data-list-id="66b47b03606ffbb4544dcced"]//div[@data-testid="list-footer"]')
     }
     get nameNewCardSetting() {
         return $('//textarea[@data-testid="list-card-composer-textarea"]')
