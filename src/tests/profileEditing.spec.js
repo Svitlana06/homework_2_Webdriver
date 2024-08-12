@@ -1,3 +1,4 @@
+const assert = require('chai').assert;
 const { inputData, url, valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 
@@ -44,8 +45,8 @@ describe('Editing the user profile', () => {
     });
 
     it('Сhecking the username change', async () => {
-        await expect(pages('accountPage').accountComponent.newUsernameChecking).toHaveText(valuesForFields.newUserNameProfile);
-
+        const newUserName = await pages('accountPage').accountComponent.newUsernameChecking.getText();
+        assert.strictEqual(newUserName, 'valuesForFields.newUserNameProfile');
     });
 
     after(async function () {

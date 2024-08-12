@@ -1,3 +1,4 @@
+const assert = require('chai').assert;
 const { inputData, url } = require('../po/data/settings');
 const { pages } = require('../po');
 
@@ -42,7 +43,8 @@ describe('Filter cards', () => {
     });
 
     it('Checking the use of the filter', async () => {
-        expect(await browser.getUrl()).toContain(url.filterOverdue);
+        const currentUrl = await browser.getUrl();
+        assert.include(currentUrl, url.filterOverdue);
     });
 
     after(async function () {

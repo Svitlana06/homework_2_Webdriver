@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('chai').assert;
 const { inputData, url, valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 

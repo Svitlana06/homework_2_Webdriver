@@ -1,4 +1,4 @@
-const assert = require('assert');
+const should = require('chai').should();
 const { inputData, url, valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 
@@ -47,7 +47,7 @@ describe('Creating a new board', () => {
 
     it('Checking if a new board has been added', async () => {
         const newBoard = await pages('boardPage').boardComponent.newBoardExistingChecking.getText();
-        assert.strictEqual(newBoard, valuesForFields.newBoardName);
+        newBoard.should.equal(valuesForFields.newBoardName);
     });
 
     after(async function () {

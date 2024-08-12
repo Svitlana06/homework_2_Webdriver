@@ -1,3 +1,4 @@
+const { expect } = require('chai');
 const { inputData, url, valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 
@@ -37,7 +38,8 @@ describe('Creating a new card on a list', () => {
     });
 
     it('Checking if a new card has been added', async () => {
-        await expect(pages('boardPage').boardComponent.existingNewCardChecking).toBeDisplayed();
+        const cardIsDisplayed = await pages('boardPage').boardComponent.existingNewCardChecking.isDisplayed();
+        expect(cardIsDisplayed).to.be.true;
     });
 
     after(async function () {

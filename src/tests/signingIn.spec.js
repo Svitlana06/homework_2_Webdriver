@@ -1,3 +1,4 @@
+const assert = require('chai').assert;
 const { inputData, url } = require('../po/data/settings');
 const { pages } = require('../po');
 
@@ -35,9 +36,9 @@ describe('Signing into an existing account', () => {
 
     it('Verification of registration', async () => {
         await pages('boardPage').boardComponent.accountOpening.click();
-        await expect(pages('boardPage').boardComponent.existingUserChecking).toBeDisplayed();
+        const isExistingUserCheckingDisplayed = await pages('boardPage').boardComponent.existingUserChecking.isDisplayed();
+        assert.isTrue(isExistingUserCheckingDisplayed);
     });
-
     after(async function () {
         await browser.deleteCookies();
     });
