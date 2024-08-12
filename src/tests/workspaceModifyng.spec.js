@@ -1,5 +1,5 @@
+const should = require('chai').should();
 const { inputData, url, valuesForFields } = require('../po/data/settings');
-const assert = require('assert');
 const { pages } = require('../po');
 
 describe('Modifying workspace setting', () => {
@@ -42,7 +42,7 @@ describe('Modifying workspace setting', () => {
 
     it('Checking changes to the frequency setting', async () => {
         const selectedFrequency = await pages('accountPage').accountComponent.frequencyChecking.getText();
-        assert.strictEqual(selectedFrequency, valuesForFields.checkedFrequently);
+        selectedFrequency.should.equal(valuesForFields.checkedFrequently);
     });
 
     after(async function () {
