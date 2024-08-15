@@ -3,27 +3,25 @@ const BaseComponent = require('../common.components/base.component')
 class RegistrationComponent extends BaseComponent {
 
     constructor() {
-        super('')
+        super('#WhiteboxContainer')
     }
 
-    get emailSetting() {
-        return $('#email')
+    input(name){
+        const selectors={
+            email:'#email',
+            username:'#username',
+            password:'#password',
+        }
+        return this.rootEL.$(selectors[name.toLowerCase()])
     }
 
-    get usernameSetting() {
-        return $('#username')
+    submitBtn(name){
+        const selectors={
+            signUp:'#signup-submit',
+            signIn:'#login-submit',
+        }
+        return this.rootEL.$(selectors[name])
     }
 
-    get signUpSubmittingBtn() {
-        return $('#signup-submit')
-    }
-
-    get signInSubmittingBtn() {
-        return $('#login-submit')
-    }
-
-    get passwordSetting() {
-        return $('#password')
-    }
 }
 module.exports = RegistrationComponent;

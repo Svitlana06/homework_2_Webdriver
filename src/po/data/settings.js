@@ -1,6 +1,6 @@
 
 const inputData = {
-    emailSignUp: 'marianmuha00@gmail.ua',
+    emailSignUp: 'marianm0@ukr.net',
     emailLogIn: 'ssavchuk0609@gmail.com',
     password: '0609Maksymiv'
 }
@@ -29,8 +29,8 @@ const valuesForFields = {
     searchingBoard: 'FirstBoard',
     checkedFrequently: 'Періодично',
 
-    newUserName:'svitlanamaks35',
-    newUserNameProfile:'@svitlanamaks35',
+    newUserName:'mariamaria787878',
+    newUserNameProfile:'@mariamaria787878',
 
     newListName:'NewList',
     newCardName:'NewCard',

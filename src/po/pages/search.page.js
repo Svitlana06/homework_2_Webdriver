@@ -5,7 +5,7 @@ class SearchPage extends BasePage{
 
     constructor (){
         super()
-        this.searchComponent=new SearchComponent()
+        this.searchComponent = new SearchComponent()
     }
 }
 module.exports= SearchPage

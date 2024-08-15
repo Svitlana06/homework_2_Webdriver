@@ -5,7 +5,7 @@ class RegistrationPage extends BasePage{
 
     constructor (){
         super()
-        this.registrationComponent=new RegistrationComponent()
+        this.registrationComponent = new RegistrationComponent()
     }
 }
 module.exports= RegistrationPage
