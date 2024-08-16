@@ -1,16 +1,16 @@
-const BasePage=require('./base.page');
-const {BoardComponent, WorkplaceComponent, FilterComponent}= require('./../components');
+const BasePage = require('./base.page');
+const { BoardComponent, WorkplaceComponent, FilterComponent } = require('./../components');
 
 
-class BoardPage extends BasePage{
+class BoardPage extends BasePage {
 
-    constructor (){
+    constructor() {
         super()
         this.workplaceComponent = new WorkplaceComponent();
         this.boardComponent = new BoardComponent();
         this.filterComponent = new FilterComponent();
-        
-        
+
+
     }
 }
-module.exports= BoardPage
+module.exports = BoardPage

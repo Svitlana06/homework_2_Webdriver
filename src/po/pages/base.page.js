@@ -1,8 +1,8 @@
-const {HeaderComponent, BoardWindowComponent, AccountWindowComponent, SearchWindowComponent}= require('./../components');
+const { HeaderComponent, BoardWindowComponent, AccountWindowComponent, SearchWindowComponent } = require('./../components');
 
-class BasePage{
+class BasePage {
 
-    constructor(url){
+    constructor(url) {
         this.url = url;
         this.headerComponent = new HeaderComponent();
         this.boardWindowComponent = new BoardWindowComponent();
@@ -10,8 +10,8 @@ class BasePage{
         this.searchWindowComponent = new SearchWindowComponent();
     }
 
-    open(){
+    open() {
         return browser.url(this.url)
     }
 }
-module.exports=BasePage;
+module.exports = BasePage;

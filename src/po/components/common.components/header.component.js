@@ -7,11 +7,11 @@ class HeaderComponent extends BaseComponent {
     }
 
     get openAccount() {
-        return $('//*[contains(@aria-label, "Відкрити меню")]')
+        return $('//*[@data-testid="header-member-menu-avatar"]')
     }
-   
+
     get addBoardBtn() {
-        return $('//p[text()="Створити"]/parent::*')
+        return $('//*[@data-testid="header-create-menu-button"]')
     }
 
     get setSearch() {

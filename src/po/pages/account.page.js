@@ -1,13 +1,13 @@
-const {SettingsComponent, ProfileVisabilityComponent}= require('./../components');
-const BasePage=require('./base.page');
+const { SettingsComponent, ProfileVisabilityComponent } = require('./../components');
+const BasePage = require('./base.page');
 
 
-class AccountPage extends BasePage{
+class AccountPage extends BasePage {
 
-    constructor (){
+    constructor() {
         super()
         this.settingsComponent = new SettingsComponent();
         this.profileVisabilityComponent = new ProfileVisabilityComponent();
     }
 }
-module.exports= AccountPage
+module.exports = AccountPage

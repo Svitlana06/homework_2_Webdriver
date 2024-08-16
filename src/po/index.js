@@ -1,5 +1,5 @@
 const pages = require('./pages/index');
 
-module.exports={
+module.exports = {
     ...pages,
 }

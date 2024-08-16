@@ -6,19 +6,19 @@ class RegistrationComponent extends BaseComponent {
         super('#WhiteboxContainer')
     }
 
-    input(name){
-        const selectors={
-            email:'#email',
-            username:'#username',
-            password:'#password',
+    input(name) {
+        const selectors = {
+            email: '#email',
+            username: '#username',
+            password: '#password',
         }
         return this.rootEL.$(selectors[name.toLowerCase()])
     }
 
-    submitBtn(name){
-        const selectors={
-            signUp:'#signup-submit',
-            signIn:'#login-submit',
+    submitBtn(name) {
+        const selectors = {
+            signUp: '#signup-submit',
+            signIn: '#login-submit',
         }
         return this.rootEL.$(selectors[name])
     }

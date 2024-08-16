@@ -27,5 +27,5 @@ module.exports = {
     BoardPage,
     SearchPage,
     AccountPage,
-    
+
 }

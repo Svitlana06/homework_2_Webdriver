@@ -6,19 +6,18 @@ class BoardWindowComponent extends BaseComponent {
         super('//*[@data-testid="header-container"]')
     }
 
-    settings(name){
-        const selectors={
-            name:'//div[text()="Назва дошки"]/following-sibling::*[1]',
-            type:'//div[contains(text(), "Дошка зроблена з карток")]'
+    settings(name) {
+        const selectors = {
+            name: '//*[@data-testid="create-board-title-input"]',
+            type: '//*[@data-testid="header-create-board-button"]'
 
         }
         return this.rootEL.$(selectors[name])
-    }  
-
-    get submitBtn() {
-        return $('//button[text()="Створити"]')
     }
 
+    get submitBtn() {
+        return $('//*[@data-testid="create-board-submit-button"]')
+    }
 
 }
 module.exports = BoardWindowComponent;
