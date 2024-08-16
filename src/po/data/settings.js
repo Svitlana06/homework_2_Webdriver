@@ -1,6 +1,6 @@
 
 const inputData = {
-    emailSignUp: 'marianm0@ukr.net',
+    emailSignUp: 'olehsdf12m0@meta.ua',
     emailLogIn: 'ssavchuk0609@gmail.com',
     password: '0609Maksymiv'
 }
@@ -11,9 +11,9 @@ const url = {
     login: '/login',
     boards: '/boards',
     test: 'q=FirstBoard',
-    filter:'filter',
-    filterOverdue:'filter=overdue:true',
-    newBoardUrl:'/newboard',
+    filter: 'filter',
+    filterOverdue: 'filter=overdue:true',
+    newBoardUrl: '/newboard',
 
 }
 const valuesForFields = {
@@ -29,14 +29,14 @@ const valuesForFields = {
     searchingBoard: 'FirstBoard',
     checkedFrequently: 'Періодично',
 
-    newUserName:'mariamaria787878',
-    newUserNameProfile:'@mariamaria787878',
+    newUserName: 'antonina678api90',
+    newUserNameProfile: '@antonina678api90',
 
-    newListName:'NewList',
-    newCardName:'NewCard',
-    newBoardName:'NewBoard',
+    newListName: 'NewList',
+    newCardName: 'NewCard',
+    newBoardName: 'NewBoard',
 
-    nameExistedBoard:'FirstBoard',
+    nameExistedBoard: 'FirstBoard',
 
     username: 'Maria'
 }
@@ -45,6 +45,5 @@ module.exports = {
     inputData,
     url,
     valuesForFields
-
 }
 

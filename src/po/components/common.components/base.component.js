@@ -9,6 +9,5 @@ class BaseComponent {
         return $(this.rootSelector)
     }
 
-
 }
 module.exports = BaseComponent;

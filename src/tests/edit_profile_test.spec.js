@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const { inputData, url, valuesForFields } = require('../po/data/settings');
+const { valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
 
@@ -19,7 +19,7 @@ describe('Editing the user profile', () => {
 
         await browser.waitUntil(async () => {
             return (await browser.getUrl()).includes(valuesForFields.newUserName);
-        }, { timeout: 18000 });
+        }, { timeout: 10000 });
     });
 
     it('Сhecking the username change', async () => {

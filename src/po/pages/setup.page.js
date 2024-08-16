@@ -1,12 +1,11 @@
-const BasePage=require('./base.page');
-const {SetupComponent}= require('./../components');
+const BasePage = require('./base.page');
+const { SetupComponent } = require('./../components');
 
+class SetupPage extends BasePage {
 
-class SetupPage extends BasePage{
-
-    constructor (){
+    constructor() {
         super()
         this.setupComponent = new SetupComponent();
     }
 }
-module.exports= SetupPage
+module.exports = SetupPage

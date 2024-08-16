@@ -1,11 +1,11 @@
-const BasePage=require('./base.page');
-const {SearchComponent}= require('./../components');
+const BasePage = require('./base.page');
+const { SearchComponent } = require('./../components');
 
-class SearchPage extends BasePage{
+class SearchPage extends BasePage {
 
-    constructor (){
+    constructor() {
         super()
         this.searchComponent = new SearchComponent()
     }
 }
-module.exports= SearchPage
+module.exports = SearchPage

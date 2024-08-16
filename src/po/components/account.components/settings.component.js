@@ -1,10 +1,9 @@
 const BaseComponent = require('../common.components/base.component');
 
-
 class SettingsComponent extends BaseComponent {
 
     constructor() {
-        super('.u-clearfix mod-wider')
+        super('.tabbed-pane-main-col u-clearfix mod-wider')
     }
 
     get openFrequencyProperty() {

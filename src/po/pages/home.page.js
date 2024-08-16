@@ -1,13 +1,12 @@
-const BasePage=require('./base.page');
-const {MainComponent}= require('../components');
-const {HeaderHomeComponent}= require('../components');
+const BasePage = require('./base.page');
+const { HeaderHomeComponent, MainComponent } = require('../components');
 
-class HomePage extends BasePage{
+class HomePage extends BasePage {
 
-    constructor (){
+    constructor() {
         super('https://trello.com')
         this.mainComponent = new MainComponent();
         this.headerHomeComponent = new HeaderHomeComponent();
     }
 }
-module.exports= HomePage
+module.exports = HomePage

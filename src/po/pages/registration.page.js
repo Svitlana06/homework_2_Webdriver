@@ -1,11 +1,11 @@
-const BasePage=require('./base.page');
-const {RegistrationComponent}= require('./../components');
+const BasePage = require('./base.page');
+const { RegistrationComponent } = require('./../components');
 
-class RegistrationPage extends BasePage{
+class RegistrationPage extends BasePage {
 
-    constructor (){
+    constructor() {
         super()
         this.registrationComponent = new RegistrationComponent()
     }
 }
-module.exports= RegistrationPage
+module.exports = RegistrationPage

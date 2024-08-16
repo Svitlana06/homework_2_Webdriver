@@ -7,24 +7,24 @@ class AccountWindowComponent extends BaseComponent {
         super('//*[@data-testid="header-member-menu-popover"]')
     }
 
-    checkUser(name){
-        const selectors={
-            newUser:`//h2[text()="Обліковий запис"]//ancestor::div//div[text()="${inputData.emailSignUp}"]`,
-            existedUser:`//h2[text()="Обліковий запис"]//ancestor::div//div[text()="${inputData.emailLogIn}"]`,
+    checkUser(name) {
+        const selectors = {
+            newUser: `//h2[text()="Обліковий запис"]//ancestor::div//div[text()="${inputData.emailSignUp}"]`,
+            existedUser: `//h2[text()="Обліковий запис"]//ancestor::div//div[text()="${inputData.emailLogIn}"]`,
         }
         return this.rootEL.$(selectors[name])
     }
 
-    settingsBtn(name){
-        const selectors={
-            account:'//a[@data-testid="account-menu-settings"]',
-            profile:'//span[contains(text(), "Профіль")]',
+    settingsBtn(name) {
+        const selectors = {
+            account: '//*[@data-testid="account-menu-settings"]',
+            profile: '//*[@data-testid="account-menu-profile"]',
         }
         return this.rootEL.$(selectors[name])
     }
 
 
-   
+
 
 }
 module.exports = AccountWindowComponent;

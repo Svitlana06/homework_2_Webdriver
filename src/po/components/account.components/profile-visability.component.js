@@ -1,11 +1,10 @@
 const BaseComponent = require('../common.components/base.component');
 const { valuesForFields } = require('../../data/settings');
 
-
 class ProfileVisabilityComponent extends BaseComponent {
 
     constructor() {
-        super('.u-clearfix mod-wider')
+        super('//*[@data-testid="profile-tab-container"]')
     }
 
     get changeUsername() {
@@ -16,7 +15,7 @@ class ProfileVisabilityComponent extends BaseComponent {
     }
     get checkNewUsername() {
         return $(`//span[text()="${valuesForFields.username}"]/following-sibling::*[1]`)
-        
+
     }
 }
 
