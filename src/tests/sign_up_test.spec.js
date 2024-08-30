@@ -1,4 +1,4 @@
-const { inputData, url, valuesForFields } = require('../po/data/settings');
+const { inputData, url, valuesForFields } = require('./settings');
 const { pages } = require('../po');
 
 
