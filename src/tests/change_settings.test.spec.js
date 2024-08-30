@@ -1,5 +1,5 @@
 const should = require('chai').should();
-const { valuesForFields } = require('../po/data/settings');
+const { valuesForFields } = require('./settings');
 const signIn = require('./sign_in');
 const { pages } = require('../po');
 
