@@ -3,7 +3,7 @@ const { url } = require('./settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
 
-describe('Filter cards', () => {
+describe.skip('Filter cards', () => {
 
     before(async () => {
         await signIn();

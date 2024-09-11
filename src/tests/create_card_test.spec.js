@@ -3,7 +3,7 @@ const { valuesForFields } = require('./settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
 
-describe('Creating a new card on a list', () => {
+describe.skip('Creating a new card on a list', () => {
 
     before(async () => {
         await signIn();

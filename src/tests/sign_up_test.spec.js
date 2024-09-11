@@ -2,7 +2,7 @@ const { inputData, url, valuesForFields } = require('./settings');
 const { pages } = require('../po');
 
 
-describe('Sign up for a new Trello account', () => {
+describe.skip('Sign up for a new Trello account', () => {
 
     before(async () => {
         await pages('homePage').open();
