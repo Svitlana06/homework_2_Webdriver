@@ -4,7 +4,7 @@ const { valuesForFields } = require('../../../tests/settings');
 class ProfileVisabilityComponent extends BaseComponent {
 
     constructor() {
-        super('//*[@data-testid="profile-tab-container"]')
+        super('[data-testid="profile-tab-container"]')
     }
 
     get changeUsername() {
