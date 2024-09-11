@@ -52,7 +52,7 @@ exports.config = {
     //
     capabilities: [
         {
-        maxInstances: 2,
+        maxInstances: 1,
         browserName: 'chrome',
         'goog:chromeOptions': {
             
@@ -60,15 +60,15 @@ exports.config = {
             ]
         }
     },
-    {
-        maxInstances: 2,
-        browserName: 'firefox',
-        'moz:firefoxOptions': {
-            args: [
-                '-headless'
-            ]
-        }
-    },
+    // {
+    //     maxInstances: 2,
+    //     browserName: 'firefox',
+    //     'moz:firefoxOptions': {
+    //         args: [
+    //             '-headless'
+    //         ]
+    //     }
+    // },
     // {
         // maxInstances: 2,
         // browserName: 'safari',
