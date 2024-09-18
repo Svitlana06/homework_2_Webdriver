@@ -47,3 +47,17 @@ module.exports = {
     valuesForFields
 }
 
+Only English
+Namings
+Is src/index.js rexport something else
+How Pages have different urls?
+Do not assign components in ctor
+Use css selector
+Use fields to store locators
+Why super()
+Common components are actually not column
+Where base selector used?
+Page logic shoudl resolve urls
+use .skip instead of //
+incapsulate login logic
+move wdio script to test

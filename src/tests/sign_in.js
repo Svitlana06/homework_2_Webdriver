@@ -5,13 +5,14 @@ const { pages } = require('../po');
 async function signIn() {
 
     try {
-        await pages('homePage').open();
-        await pages('homePage').headerHomeComponent.signInBtn.click();
+        // await pages('homePage').open();
+        // await pages('homePage').headerHomeComponent.signInBtn.click();
 
-        await browser.waitUntil(async () => {
-            return (await browser.getUrl()).includes(url.login);
-        }, { timeout: 10000 });
+        // await browser.waitUntil(async () => {
+        //     return (await browser.getUrl()).includes(url.login);
+        // }, { timeout: 10000 });
 
+        //browser.url("registPageUrl")
         await pages('registrationPage').registrationComponent.input('username').setValue(inputData.emailLogIn);
         await pages('registrationPage').registrationComponent.submitBtn('signIn').click();
 

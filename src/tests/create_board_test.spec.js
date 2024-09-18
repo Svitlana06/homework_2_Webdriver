@@ -2,19 +2,20 @@ const should = require('chai').should();
 const { url, valuesForFields } = require('../po/data/settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
+const BasePage = require('../po/pages/base.page');
 
 describe('Creating a new board', () => {
-
+    const basePage = new BasePage();
     before(async () => {
         await signIn();
     });
 
     it('Creating a new board', async () => {
-        await pages('basePage').headerComponent.addBoardBtn.click();
-        await pages('basePage').boardWindowComponent.settings('type').click();
-        await pages('basePage').boardWindowComponent.settings('name').setValue(valuesForFields.newBoardName);
-        await pages('basePage').boardWindowComponent.submitBtn.isDisplayed();
-        await pages('basePage').boardWindowComponent.submitBtn.click();
+        await basePage.headerComponent.addBoardBtn.click();
+        await basePage.boardWindowComponent.type.click();
+        await basePage.boardWindowComponent.settings('name').setValue(valuesForFields.newBoardName);
+        await basePage.boardWindowComponent.submitBtn.isDisplayed();
+        await basePage.boardWindowComponent.submitBtn.click();
 
         await browser.waitUntil(async () => {
             return (await browser.getUrl()).includes(url.newBoardUrl);
