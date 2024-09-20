@@ -4,7 +4,7 @@ exports.config = {
     services: ['chromedriver'],
     
     specs: [
-        'D:/homework/серпень/homework_2_Webdriver_Know/features/trello.feature'
+        '../../features/trello.feature'
         
     ],
     exclude: [],
