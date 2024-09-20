@@ -9,6 +9,7 @@ Given('I am on the workspace settings page', async () => {
 });
 
 When('I update workspace details', async  () => {
+    await pages('accountPage').settingsComponent.openFrequencyProperty.waitForDisplayed({timeout:1000})
     await pages('accountPage').settingsComponent.openFrequencyProperty.click();
 
     await pages('accountPage').settingsComponent.changeFrequency.waitForExist({ timeout: 10000 })
