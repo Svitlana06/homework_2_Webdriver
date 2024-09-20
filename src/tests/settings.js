@@ -1,6 +1,6 @@
 
 const inputData = {
-    emailSignUp: 'olehswe2370@gmail.ua',
+    emailSignUp: 'oldd9000d560asd@gmail.com',
     emailLogIn: 'ssavchuk0609@gmail.com',
     password: '0609Maksymiv'
 }

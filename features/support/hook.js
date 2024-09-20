@@ -1,18 +1,18 @@
-const assert = require('chai').assert;
-const { inputData, url } = require('./settings');
-const { pages } = require('../po');
+const { Before, After } = require('@cucumber/cucumber');
+const { inputData, url } = require('../../src/tests/settings');
+const { pages } = require('../../src/po');
 
-async function signIn() {
+Before(async function (scenario) {
+    if (scenario.pickle.tags.some(tag => tag.name === '@login')){
 
     try {
         await pages('homePage').open();
-        console.log('here')
         await pages('homePage').headerHomeComponent.signInBtn.click();
-        console.log('here again')
 
         await browser.waitUntil(async () => {
             return (await browser.getUrl()).includes(url.login);
         }, { timeout: 10000 });
+        
 
         await pages('registrationPage').registrationComponent.input('username').setValue(inputData.emailLogIn);
         await pages('registrationPage').registrationComponent.submitBtn('signIn').click();
@@ -27,12 +27,16 @@ async function signIn() {
         await browser.waitUntil(async () => {
             return (await browser.getUrl()).includes(url.boards);
         }, { timeout: 15000 });
-
-    } catch (error) {
-        console.error('Error during setup:', error);
-        throw error;
     }
-};
+    catch (error) {
+        console.error('Error in Before hook:', error);
+    }
+    }
+
+});
+After(async function () {
+    await browser.deleteCookies();
+})
 
 
-module.exports = signIn;
+module.exports = { After, Before };
