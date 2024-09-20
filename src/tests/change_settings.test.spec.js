@@ -15,7 +15,7 @@ describe('Modifying workspace setting', () => {
 
         await pages('accountPage').settingsComponent.openFrequencyProperty.click();
 
-        await pages('accountPage').settingsComponent.changeFrequency.waitForExist({ timeout: 10000 })
+        await pages('accountPage').settingsComponent.changeFrequency.waitForExist({ timeout: 10000 });
         await pages('accountPage').settingsComponent.changeFrequency.click();
     });
 

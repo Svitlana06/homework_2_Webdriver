@@ -2,26 +2,28 @@
   "name": "homework_2_webdriver",
   "version": "1.0.0",
   "main": "index.js",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@wdio/cli": "^9.0.9",
+    "@wdio/cucumber-framework": "^9.0.8",
+    "edgedriver": "^5.6.1",
+    "glob": "^11.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run src/config/wdio.conf.js"
+    "test:cucumber": "wdio run src/config/wdio.cucumber.conf.js --tags '@login'",
+    "test:wdio": "wdio run src/config/wdio.conf.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@wdio/cli": "^8.39.1",
-    "@wdio/local-runner": "^8.39.1",
-    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/local-runner": "^8.40.5",
+    "@wdio/mocha-framework": "^8.40.3",
     "@wdio/spec-reporter": "^8.40.3",
-    "@wdio/visual-service": "^5.1.1",
-    "chai": "~4.0.1",
-    "chromedriver": "^127.0.0",
-    "wdio-chromedriver-service": "^8.1.1"
-  },
-  "dependencies": {
-    "chai-webdriverio": "^1.0.0",
+    "chai": "^4.5.0",
+    "chromedriver": "^127.0.3",
+    "wdio-chromedriver-service": "^8.1.1",
     "wdio-html-nice-reporter": "^8.1.6"
   }
 }
