@@ -23,6 +23,7 @@ exports.config = {
     cucumberOpts: {
         
         require: ['features/support/hook.js',
+                  
             'features/step-definitions/change_settings_steps.js',
             'features/step-definitions/create_board_steps.js',
             'features/step-definitions/create_card_steps.js',
