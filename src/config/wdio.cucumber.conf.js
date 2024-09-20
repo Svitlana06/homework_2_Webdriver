@@ -23,7 +23,7 @@ exports.config = {
     cucumberOpts: {
         
         require: ['features/support/hook.js'
-            'features/step-definitions/require-steps.js'
+            'D:/homework/серпень/homework_2_Webdriver_Know/features/step-definitions/require-steps.js'
         ],
         backtrace: false,
         requireModule: [],
