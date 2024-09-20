@@ -22,7 +22,7 @@ exports.config = {
     
     cucumberOpts: {
         
-        require: ['../../features/support/hook',
+        require: ['../../features/support/hook.js',
             '../../features/step-definitions/require-steps.js'
         ],
         backtrace: false,
