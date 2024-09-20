@@ -32,6 +32,7 @@ exports.config = {
             'features/step-definitions/seek_board_steps.js',
             'features/step-definitions/sign_up_steps.js',
         ],
+        
         backtrace: false,
         requireModule: [],
         tags: ['@login'],
