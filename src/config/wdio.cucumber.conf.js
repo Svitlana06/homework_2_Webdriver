@@ -7,11 +7,15 @@ exports.config = {
         '../../features/trello.feature'
         
     ],
+    
     exclude: [],
     maxInstances: 1,
     capabilities: [{
         maxInstances: 1,
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['--headless', '--disable-gpu', '--window-size=1920,1080']
+        }
     }],
     
     reporters: ['spec'],
