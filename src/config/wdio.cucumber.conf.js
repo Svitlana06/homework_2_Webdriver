@@ -40,11 +40,4 @@ exports.config = {
         timeout: 60000,
         ignoreUndefinedDefinitions: false
     },
-    
-    onPrepare: function () {
-        console.log('Test Suite is starting!');
-    },
-    onComplete: function () {
-        console.log('Test Suite has ended!');
-    }
 };

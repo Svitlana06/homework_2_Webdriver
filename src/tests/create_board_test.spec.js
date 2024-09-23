@@ -3,7 +3,7 @@ const { url, valuesForFields } = require('./settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
 
-describe.skip('Creating a new board', () => {
+describe('Creating a new board', () => {
 
     before(async () => {
         await signIn();

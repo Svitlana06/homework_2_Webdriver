@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test:cucumber": "wdio run src/config/wdio.cucumber.conf.js --tags '@login'",
-    "test:wdio": "wdio run src/config/wdio.conf.js"
+    "test:mocha": "wdio run src/config/wdio.mocha.conf.js"
   },
   "keywords": [],
   "author": "",

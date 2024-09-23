@@ -3,7 +3,7 @@ const { valuesForFields } = require('./settings');
 const { pages } = require('../po');
 const signIn = require('./sign_in');
 
-describe.skip('Editing the user profile', () => {
+describe('Editing the user profile', () => {
 
     before(async () => {
         await signIn();
