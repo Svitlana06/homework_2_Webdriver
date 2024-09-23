@@ -1,16 +1,19 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const assert = require('chai').assert;
-const { pages } = require('../../po');
 const { valuesForFields, url } = require('../../tests/settings');
+const {SearchPage, BasePage} = require('../../po/pages/imports.js');
+
+const basePage = new BasePage();
+const searchPage = new SearchPage();
 
 Given('I am on the boards page', async () => {
     expect((await browser.getUrl()).includes(url.boards));
 });
 
 When('I seek the boards', async () => {
-    await pages('basePage').headerComponent.setSearch.setValue(valuesForFields.searchingBoard);
-    await pages('basePage').searchWindowComponent.openResultsBtn.waitForDisplayed({ timeout: 12000 });
-    await pages('basePage').searchWindowComponent.openResultsBtn.click();
+    await basePage.headerComponent.setSearch.setValue(valuesForFields.searchingBoard);
+    await basePage.searchWindowComponent.openResultsBtn.waitForDisplayed({ timeout: 12000 });
+    await basePage.searchWindowComponent.openResultsBtn.click();
     await browser.waitUntil(async () => {
             return (await browser.getUrl()).includes(url.test);
     }, {
@@ -19,5 +22,5 @@ When('I seek the boards', async () => {
 });
 
 Then('only necessary boards should be displayed', async () => {
-    assert.strictEqual(await pages('searchPage').searchComponent.rootEL.getValue(), valuesForFields.searchingBoard);
+    assert.strictEqual(await searchPage.searchComponent.rootEL.getValue(), valuesForFields.searchingBoard);
 });
