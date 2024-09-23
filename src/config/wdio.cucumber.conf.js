@@ -33,6 +33,7 @@ exports.config = {
             'src/features/step-definitions/sign_up_steps.js',
         ],
         
+        
         backtrace: false,
         requireModule: [],
         tags: ['@login'],
