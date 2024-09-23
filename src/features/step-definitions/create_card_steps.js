@@ -1,7 +1,7 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const { expect } = require('chai');
-const { pages } = require('../../src/po');
-const { valuesForFields } = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields } = require('../../tests/settings');
 
 
 Given('I am on a Trello board with existing lists', async () => {

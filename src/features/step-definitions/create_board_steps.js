@@ -1,8 +1,8 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const should = require('chai').should();
 const { expect } = require('chai');
-const { pages } = require('../../src/po');
-const { valuesForFields, url } = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields, url } = require('../../tests/settings');
 
 Given('I"m on the boards page', async () => {
     expect((await browser.getUrl()).includes(url.boards));

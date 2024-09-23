@@ -1,7 +1,7 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const { expect } = require('chai')
-const { pages } = require('../../src/po');
-const { valuesForFields,inputData, url } = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields,inputData, url } = require('../../tests/settings');
 
 Given('the Trello sign up page is displayed', async () => {
     await pages('homePage').open();

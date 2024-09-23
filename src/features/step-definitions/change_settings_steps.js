@@ -1,7 +1,7 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const should = require('chai').should();
-const { pages } = require('../../src/po');
-const { valuesForFields} = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields} = require('../../tests/settings');
 
 Given('I am on the workspace settings page', async () => {
     await pages('basePage').headerComponent.openAccount.click();

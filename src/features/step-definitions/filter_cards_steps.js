@@ -1,7 +1,7 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const assert = require('chai').assert;
-const { pages } = require('../../src/po');
-const {url } = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const {url } = require('../../tests/settings');
 
 Given('I am on a Trello board with multiple cards', async () => {
     await pages('boardPage').boardComponent.check('existedBoard').click();

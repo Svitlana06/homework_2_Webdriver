@@ -4,7 +4,7 @@ exports.config = {
     services: ['chromedriver'],
     
     specs: [
-        '../../features/trello.feature'
+        '../features/trello.feature'
         
     ],
     
@@ -22,9 +22,17 @@ exports.config = {
     
     cucumberOpts: {
         
-        require: ['../../features/support/hook.js',
-            '../../features/step-definitions/require-steps.js'
+        require: ['src/features/support/hook.js',  
+            'src/features/step-definitions/change_settings_steps.js',
+            'src/features/step-definitions/create_board_steps.js',
+            'src/features/step-definitions/create_card_steps.js',
+            'src/features/step-definitions/create_list_steps.js',
+            'src/features/step-definitions/edit_profile_steps.js',
+            'src/features/step-definitions/filter_cards_steps.js',
+            'src/features/step-definitions/seek_board_steps.js',
+            'src/features/step-definitions/sign_up_steps.js',
         ],
+        
         backtrace: false,
         requireModule: [],
         tags: ['@login'],
