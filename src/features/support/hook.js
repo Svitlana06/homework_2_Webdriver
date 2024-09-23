@@ -1,6 +1,6 @@
 const { Before, After } = require('@cucumber/cucumber');
-const { inputData, url } = require('../../src/tests/settings');
-const { pages } = require('../../src/po');
+const { inputData, url } = require('../../tests/settings');
+const { pages } = require('../../po');
 
 Before(async function (scenario) {
     if (scenario.pickle.tags.some(tag => tag.name === '@login')){

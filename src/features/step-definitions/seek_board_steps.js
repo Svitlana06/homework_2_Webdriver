@@ -1,7 +1,7 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const assert = require('chai').assert;
-const { pages } = require('../../src/po');
-const { valuesForFields, url } = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields, url } = require('../../tests/settings');
 
 Given('I am on the boards page', async () => {
     expect((await browser.getUrl()).includes(url.boards));
