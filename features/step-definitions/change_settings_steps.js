@@ -1,7 +1,8 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const should = require('chai').should();
-const { pages } = require('../../src/po');
-const { valuesForFields} = require('../../src/tests/settings');
+const { pages } = require('../../po');
+const { valuesForFields} = require('../../tests/settings');
+
 
 Given('I am on the workspace settings page', async () => {
     await pages('basePage').headerComponent.openAccount.click();
@@ -9,7 +10,6 @@ Given('I am on the workspace settings page', async () => {
 });
 
 When('I update workspace details', async  () => {
-    await pages('accountPage').settingsComponent.openFrequencyProperty.waitForDisplayed({timeout:1000})
     await pages('accountPage').settingsComponent.openFrequencyProperty.click();
 
     await pages('accountPage').settingsComponent.changeFrequency.waitForExist({ timeout: 10000 })
