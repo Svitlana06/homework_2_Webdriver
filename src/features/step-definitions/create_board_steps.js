@@ -1,21 +1,28 @@
 const { Given, When, Then} = require('@cucumber/cucumber');
 const should = require('chai').should();
+const { expect } = require('chai');
 const { pages } = require('../../po');
-const { valuesForFields} = require('../../tests/settings');
+const { valuesForFields, url } = require('../../tests/settings');
 
-
-Given('I am on the workspace settings page', async () => {
-    await pages('basePage').headerComponent.openAccount.click();
-    await pages('basePage').accountWindowComponent.settingsBtn('account').click();
+Given('I"m on the boards page', async () => {
+    expect((await browser.getUrl()).includes(url.boards));
 });
 
-When('I update workspace details', async  () => {
-    await pages('accountPage').settingsComponent.openFrequencyProperty.click();
+When('I add a new board', async () => {
+    await pages('basePage').headerComponent.addBoardBtn.click();
+    await pages('basePage').boardWindowComponent.settings('type').click();
+    await pages('basePage').boardWindowComponent.settings('name').setValue(valuesForFields.newBoardName);
+    await pages('basePage').boardWindowComponent.submitBtn.isDisplayed();
+    await pages('basePage').boardWindowComponent.submitBtn.click();
 
-    await pages('accountPage').settingsComponent.changeFrequency.waitForExist({ timeout: 10000 })
-    await pages('accountPage').settingsComponent.changeFrequency.click();
+    await browser.waitUntil(async () => {
+        return (await browser.getUrl()).includes(url.newBoardUrl);
+    }, {
+        timeout: 10000,
+    });
+    await pages('boardPage').boardComponent.check('board').isDisplayed();
 });
 
-Then('the workspace settings should be updated successfully', async () => {
-    (await pages('accountPage').settingsComponent.checkFrequency.getText()).should.equal(valuesForFields.checkedFrequently);
+Then('a new board should be created and displayed', async () => {
+    (await pages('boardPage').boardComponent.check('board').getText()).should.equal(valuesForFields.newBoardName);
 });
