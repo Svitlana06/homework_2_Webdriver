@@ -5,7 +5,6 @@ exports.config = {
     
     specs: [
         '../features/trello.feature'
-        
     ],
     
     exclude: [],
@@ -23,7 +22,6 @@ exports.config = {
     cucumberOpts: {
         
         require: ['src/features/support/hook.js', 
-             
             'src/features/step-definitions/change_settings_steps.js',
             'src/features/step-definitions/create_board_steps.js',
             'src/features/step-definitions/create_card_steps.js',
@@ -33,7 +31,6 @@ exports.config = {
             'src/features/step-definitions/seek_board_steps.js',
             'src/features/step-definitions/sign_up_steps.js',
         ],
-        
         
         backtrace: false,
         requireModule: [],

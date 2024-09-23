@@ -26,7 +26,6 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-
     ],
     //
     // ============
@@ -55,7 +54,6 @@ exports.config = {
             maxInstances: 1,
             browserName: 'chrome',
             'goog:chromeOptions': {
-
                 args: [
                 ]
             }
@@ -76,7 +74,6 @@ exports.config = {
         //     args: ['--headless']
         // }
         // }
-
     ],
 
     //
