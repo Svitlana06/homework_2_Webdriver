@@ -3,6 +3,7 @@ const should = require('chai').should();
 const { pages } = require('../../po');
 const { valuesForFields} = require('../../tests/settings');
 
+
 Given('I am on the workspace settings page', async () => {
     await pages('basePage').headerComponent.openAccount.click();
     await pages('basePage').accountWindowComponent.settingsBtn('account').click();
