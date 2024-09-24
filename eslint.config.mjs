@@ -25,6 +25,9 @@ export default [
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-undef': 'error',
+      'comment-format': [true, 'check-space'],
+      curly: true,
+      forin: true,
     },
     plugins: {
       mocha,
