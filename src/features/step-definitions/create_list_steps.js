@@ -11,9 +11,7 @@ Given('I am on a Trello board', async () => {
 
 When('I add a new list', async () => {
   await boardPage.boardComponent.createBtn('list').click();
-  await boardPage.boardComponent
-    .input('list')
-    .setValue(valuesForFields.newListName);
+  await boardPage.boardComponent.input('list').setValue(valuesForFields.newListName);
   await boardPage.boardComponent.addBtn('list').click();
 });
 

@@ -12,15 +12,12 @@ describe('Creating a new list', () => {
     await pages('boardPage').boardComponent.check('existedBoard').click();
     await pages('boardPage').boardComponent.createBtn('list').click();
 
-    await pages('boardPage')
-      .boardComponent.input('list')
-      .setValue(valuesForFields.newListName);
+    await pages('boardPage').boardComponent.input('list').setValue(valuesForFields.newListName);
     await pages('boardPage').boardComponent.addBtn('list').click();
   });
 
   it('checking if a new list has been added', async () => {
-    expect(await pages('boardPage').boardComponent.check('list').isDisplayed())
-      .to.be.true;
+    expect(await pages('boardPage').boardComponent.check('list').isDisplayed()).to.be.true;
   });
 
   after(async function () {

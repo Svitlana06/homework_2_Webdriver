@@ -18,9 +18,7 @@ Before(async function (scenario) {
       await pages('registrationPage')
         .registrationComponent.input('username')
         .setValue(inputData.emailLogIn);
-      await pages('registrationPage')
-        .registrationComponent.submitBtn('signIn')
-        .click();
+      await pages('registrationPage').registrationComponent.submitBtn('signIn').click();
 
       await browser.waitUntil(
         async () => {
@@ -34,9 +32,7 @@ Before(async function (scenario) {
       await pages('registrationPage')
         .registrationComponent.input('password')
         .setValue(inputData.password);
-      await pages('registrationPage')
-        .registrationComponent.submitBtn('signIn')
-        .click();
+      await pages('registrationPage').registrationComponent.submitBtn('signIn').click();
 
       await browser.waitUntil(
         async () => {

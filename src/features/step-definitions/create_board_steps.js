@@ -14,9 +14,7 @@ Given('I"m on the boards page', async () => {
 When('I add a new board', async () => {
   await basePage.headerComponent.addBoardBtn.click();
   await basePage.boardWindowComponent.settings('type').click();
-  await basePage.boardWindowComponent
-    .settings('name')
-    .setValue(valuesForFields.newBoardName);
+  await basePage.boardWindowComponent.settings('name').setValue(valuesForFields.newBoardName);
   await basePage.boardWindowComponent.submitBtn.isDisplayed();
   await basePage.boardWindowComponent.submitBtn.click();
 

@@ -1,7 +1,4 @@
-const {
-  SettingsComponent,
-  ProfileVisabilityComponent,
-} = require('./../components');
+const { SettingsComponent, ProfileVisabilityComponent } = require('./../components');
 const BasePage = require('./base.page');
 
 class AccountPage extends BasePage {

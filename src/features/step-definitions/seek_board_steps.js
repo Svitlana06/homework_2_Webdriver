@@ -11,9 +11,7 @@ Given('I am on the boards page', async () => {
 });
 
 When('I seek the boards', async () => {
-  await basePage.headerComponent.setSearch.setValue(
-    valuesForFields.searchingBoard
-  );
+  await basePage.headerComponent.setSearch.setValue(valuesForFields.searchingBoard);
   await basePage.searchWindowComponent.openResultsBtn.waitForDisplayed({
     timeout: 12000,
   });

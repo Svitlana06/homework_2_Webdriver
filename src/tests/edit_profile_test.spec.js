@@ -10,13 +10,9 @@ describe('Editing the user profile', () => {
 
   it('Сhanging the username', async () => {
     await pages('basePage').headerComponent.openAccount.click();
-    await pages('basePage')
-      .accountWindowComponent.settingsBtn('profile')
-      .click();
+    await pages('basePage').accountWindowComponent.settingsBtn('profile').click();
 
-    await pages(
-      'accountPage'
-    ).profileVisabilityComponent.changeUsername.setValue(
+    await pages('accountPage').profileVisabilityComponent.changeUsername.setValue(
       valuesForFields.newUserName
     );
 
@@ -32,9 +28,7 @@ describe('Editing the user profile', () => {
 
   it('Сhecking the username change', async () => {
     assert.strictEqual(
-      await pages(
-        'accountPage'
-      ).profileVisabilityComponent.checkNewUsername.getText(),
+      await pages('accountPage').profileVisabilityComponent.checkNewUsername.getText(),
       valuesForFields.newUserNameProfile
     );
   });
