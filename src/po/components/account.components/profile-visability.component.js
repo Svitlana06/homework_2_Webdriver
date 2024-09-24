@@ -13,9 +13,7 @@ class ProfileVisabilityComponent extends BaseComponent {
     return $('//button[text()="Зберегти"]');
   }
   get checkNewUsername() {
-    return $(
-      `//span[text()="${valuesForFields.username}"]/following-sibling::*[1]`
-    );
+    return $(`//span[text()="${valuesForFields.username}"]/following-sibling::*[1]`);
   }
 }
 

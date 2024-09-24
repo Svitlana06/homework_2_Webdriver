@@ -19,9 +19,7 @@ describe.skip('Sign up for a new Trello account', () => {
     await pages('registrationPage')
       .registrationComponent.input('email')
       .setValue(inputData.emailSignUp);
-    await pages('registrationPage')
-      .registrationComponent.submitBtn('signUp')
-      .click();
+    await pages('registrationPage').registrationComponent.submitBtn('signUp').click();
 
     await browser.waitUntil(
       async () => {
@@ -73,9 +71,7 @@ describe.skip('Sign up for a new Trello account', () => {
 
     await browser.waitUntil(
       async () => {
-        return pages(
-          'setupPage'
-        ).setupComponent.premiumVersionOffer.isDisplayed();
+        return pages('setupPage').setupComponent.premiumVersionOffer.isDisplayed();
       },
       {
         timeout: 10000,
@@ -87,9 +83,7 @@ describe.skip('Sign up for a new Trello account', () => {
 
   it('Checking the creation of a profile', async () => {
     await pages('basePage').headerComponent.openAccount.click();
-    await expect(
-      pages('basePage').accountWindowComponent.checkUser('newUser')
-    ).toBeDisplayed();
+    await expect(pages('basePage').accountWindowComponent.checkUser('newUser')).toBeDisplayed();
   });
 
   after(async function () {

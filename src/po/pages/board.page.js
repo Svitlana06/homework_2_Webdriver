@@ -1,9 +1,5 @@
 const BasePage = require('./base.page');
-const {
-  BoardComponent,
-  WorkplaceComponent,
-  FilterComponent,
-} = require('./../components');
+const { BoardComponent, WorkplaceComponent, FilterComponent } = require('./../components');
 
 class BoardPage extends BasePage {
   constructor() {

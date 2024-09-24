@@ -9,12 +9,10 @@ describe('Searching for an existing board', () => {
   });
 
   it('Searching for a specific board', async () => {
-    await pages('basePage').headerComponent.setSearch.setValue(
-      valuesForFields.searchingBoard
-    );
-    await pages(
-      'basePage'
-    ).searchWindowComponent.openResultsBtn.waitForDisplayed({ timeout: 12000 });
+    await pages('basePage').headerComponent.setSearch.setValue(valuesForFields.searchingBoard);
+    await pages('basePage').searchWindowComponent.openResultsBtn.waitForDisplayed({
+      timeout: 12000,
+    });
     await pages('basePage').searchWindowComponent.openResultsBtn.click();
     await browser.waitUntil(
       async () => {

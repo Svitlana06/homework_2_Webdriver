@@ -2,11 +2,7 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('chai');
 const { pages } = require('../../po');
 const { valuesForFields, inputData, url } = require('../../tests/settings');
-const {
-  BasePage,
-  SetupPage,
-  RegistrationPage,
-} = require('../../po/pages/imports.js');
+const { BasePage, SetupPage, RegistrationPage } = require('../../po/pages/imports.js');
 
 const basePage = new BasePage();
 const setupPage = new SetupPage();
@@ -26,9 +22,7 @@ Given('the Trello sign up page is displayed', async () => {
 });
 
 When('I enter valid registration details', async () => {
-  await registrationPage.registrationComponent
-    .input('email')
-    .setValue(inputData.emailSignUp);
+  await registrationPage.registrationComponent.input('email').setValue(inputData.emailSignUp);
   await registrationPage.registrationComponent.submitBtn('signUp').click();
 
   await browser.waitUntil(
@@ -45,16 +39,12 @@ When('I set up a profile', async () => {
   await setupPage.setupComponent.initialSettings('goal').click();
   await setupPage.setupComponent.submitBtn('continue').click();
 
-  await setupPage.setupComponent
-    .initialSettings('board')
-    .waitForDisplayed({ timeout: 10000 });
+  await setupPage.setupComponent.initialSettings('board').waitForDisplayed({ timeout: 10000 });
   await setupPage.setupComponent
     .initialSettings('board')
     .setValue(valuesForFields.registrationBoard);
   await setupPage.setupComponent.submitBtn('next').click();
-  await setupPage.setupComponent
-    .initialSettings('listFirst')
-    .waitForDisplayed({ timeout: 10000 });
+  await setupPage.setupComponent.initialSettings('listFirst').waitForDisplayed({ timeout: 10000 });
   await setupPage.setupComponent
     .initialSettings('listFirst')
     .setValue(valuesForFields.registrationListFirst);
@@ -66,9 +56,7 @@ When('I set up a profile', async () => {
     .setValue(valuesForFields.registrationListThird);
   await setupPage.setupComponent.submitBtn('next').click();
 
-  await setupPage.setupComponent
-    .initialSettings('cardFirst')
-    .waitForDisplayed({ timeout: 10000 });
+  await setupPage.setupComponent.initialSettings('cardFirst').waitForDisplayed({ timeout: 10000 });
   await setupPage.setupComponent
     .initialSettings('cardFirst')
     .setValue(valuesForFields.registrationCardFirst);
@@ -93,7 +81,5 @@ When('I set up a profile', async () => {
 
 Then('a new account should be created successfully', async () => {
   await basePage.headerComponent.openAccount.click();
-  await expect(
-    basePage.accountWindowComponent.checkUser('newUser')
-  ).isDisplayed();
+  await expect(basePage.accountWindowComponent.checkUser('newUser')).isDisplayed();
 });

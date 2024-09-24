@@ -10,9 +10,7 @@ describe('Modifying workspace setting', () => {
 
   it('Changing the frequency setting', async () => {
     await pages('basePage').headerComponent.openAccount.click();
-    await pages('basePage')
-      .accountWindowComponent.settingsBtn('account')
-      .click();
+    await pages('basePage').accountWindowComponent.settingsBtn('account').click();
 
     await pages('accountPage').settingsComponent.openFrequencyProperty.click();
 
@@ -23,9 +21,9 @@ describe('Modifying workspace setting', () => {
   });
 
   it('Checking changes to the frequency setting', async () => {
-    (
-      await pages('accountPage').settingsComponent.checkFrequency.getText()
-    ).should.equal(valuesForFields.checkedFrequently);
+    (await pages('accountPage').settingsComponent.checkFrequency.getText()).should.equal(
+      valuesForFields.checkedFrequently
+    );
   });
 
   after(async function () {

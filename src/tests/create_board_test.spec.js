@@ -29,9 +29,9 @@ describe('Creating a new board', () => {
   });
 
   it('Checking if a new board has been added', async () => {
-    (
-      await pages('boardPage').boardComponent.check('board').getText()
-    ).should.equal(valuesForFields.newBoardName);
+    (await pages('boardPage').boardComponent.check('board').getText()).should.equal(
+      valuesForFields.newBoardName
+    );
   });
 
   after(async function () {
