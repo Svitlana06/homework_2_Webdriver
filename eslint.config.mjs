@@ -2,7 +2,7 @@ import { defineConfig } from 'eslint-define-config';
 
 export default [
   defineConfig({
-    files: ['src/tests/**/*.js'], // Задайте файли, які потрібно перевірити
+    files: ['src/tests/**/*.js'],
     languageOptions: {
       parserOptions: {
         ecmaVersion: 2020,

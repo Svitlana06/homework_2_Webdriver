@@ -3,7 +3,7 @@
   "env": {
     "browser": true,
     "es6": true,
-    "mocha": true // або jest, якщо використовуєте Jest
+    "mocha": true
   },
   "globals": {
     "browser": "readonly",
