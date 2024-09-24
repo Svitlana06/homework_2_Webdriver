@@ -1,8 +1,9 @@
 import { defineConfig } from 'eslint-define-config';
+import mocha from 'eslint-plugin-mocha';
 
 export default [
   defineConfig({
-    files: ['src/tests/**/*.js'],
+    files: ['src/features/step-difinitions/**/*.js'],
     languageOptions: {
       parserOptions: {
         ecmaVersion: 2020,
@@ -24,6 +25,9 @@ export default [
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-undef': 'error',
+    },
+    plugins: {
+      mocha,
     },
   }),
 ];
