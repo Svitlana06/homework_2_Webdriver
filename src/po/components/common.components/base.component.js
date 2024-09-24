@@ -1,13 +1,10 @@
 class BaseComponent {
+  constructor(rootSelector) {
+    this.rootSelector = rootSelector;
+  }
 
-    constructor(rootSelector) {
-        this.rootSelector = rootSelector;
-    }
-
-    get rootEL() {
-
-        return $(this.rootSelector)
-    }
-
+  get rootEL() {
+    return $(this.rootSelector);
+  }
 }
 module.exports = BaseComponent;

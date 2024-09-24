@@ -1,0 +1,21 @@
+{
+  "plugins": ["mocha"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true // або jest, якщо використовуєте Jest
+  },
+  "globals": {
+    "browser": "readonly",
+    "expect": "readonly"
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-undef": "error"
+  }
+}
