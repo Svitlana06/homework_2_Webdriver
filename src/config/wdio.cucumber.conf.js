@@ -1,5 +1,5 @@
 exports.config = {
-  framework: '@wdio/cucumber-framework',
+  framework: 'cucumber',
   runner: 'local',
 
   services: [],
