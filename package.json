@@ -5,7 +5,7 @@
   "dependencies": {
     "@cucumber/cucumber": "^10.9.0",
     "@wdio/cli": "^9.0.9",
-    "@wdio/cucumber-framework": "^9.0.8",
+    "@wdio/cucumber-framework": "^9.1.0",
     "edgedriver": "^5.6.1",
     "glob": "^11.0.0"
   },
