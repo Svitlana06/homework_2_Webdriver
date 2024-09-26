@@ -17,7 +17,7 @@ exports.config = {
     },
   ],
 
-  reporters: ['spec'],
+  reporters: ['spec'], 
 
   cucumberOpts: {
     require: [
