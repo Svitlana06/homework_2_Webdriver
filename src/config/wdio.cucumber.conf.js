@@ -2,7 +2,7 @@ exports.config = {
   framework: 'cucumber',
   runner: 'local',
 
-  services: ['chromedriver'],
+  services: [],
 
   specs: ['../features/trello.feature'],
 
