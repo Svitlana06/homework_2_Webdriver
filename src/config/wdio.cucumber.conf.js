@@ -1,5 +1,6 @@
 exports.config = {
   framework: 'cucumber',
+  runner: 'local',
 
   services: ['chromedriver'],
 
