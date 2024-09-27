@@ -8,6 +8,6 @@ Feature: Working with cards on the Trello
 
 @login_on_the_site
    Scenario: Filter cards
-   Given I am on a Trello board with multiple cards
+   Given I am on a Trello board
    When I apply a filter for specific criteria
    Then only cards matching the criteria should be displayed

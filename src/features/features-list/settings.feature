@@ -8,5 +8,5 @@ Feature: Changing settings on the Trello
     @login_on_the_site
     Scenario: Editing the user profile settings
     Given I am on the profile settings page
-    And I update my profile information
+    When I update my profile information
     Then my profile should reflect the updates
