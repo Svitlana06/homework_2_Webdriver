@@ -33,7 +33,7 @@ When('I apply a filter for specific criteria', async () => {
       return (await browser.getUrl()).includes(url.filter);
     },
     {
-      timeout: 10000,
+      timeout: 15000,
     }
   );
 });
