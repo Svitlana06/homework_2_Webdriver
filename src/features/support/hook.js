@@ -3,7 +3,7 @@ const { inputData, url } = require('../../data/data');
 const { pages } = require('../../po');
 
 Before(async function (scenario) {
-  if (scenario.pickle.tags.some((tag) => tag.name === '@login_on_the_site')) {
+  if (scenario.pickle.tags.some((tag) => tag.name === '@login')) {
     try {
       await pages('homePage').open();
       await pages('homePage').headerHomeComponent.signInBtn.click();
