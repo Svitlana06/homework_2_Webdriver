@@ -18,6 +18,7 @@ exports.config = {
     },
   ],
 
+  
   reporters: ['spec'], 
 
   cucumberOpts: {
