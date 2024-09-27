@@ -1,9 +1,9 @@
 const { Before, After } = require('@cucumber/cucumber');
-const { inputData, url } = require('../../tests/settings');
+const { inputData, url } = require('../../data/data');
 const { pages } = require('../../po');
 
 Before(async function (scenario) {
-  if (scenario.pickle.tags.some((tag) => tag.name === '@login')) {
+  if (scenario.pickle.tags.some((tag) => tag.name === '@login_on_the_site')) {
     try {
       await pages('homePage').open();
       await pages('homePage').headerHomeComponent.signInBtn.click();
