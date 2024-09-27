@@ -36,7 +36,7 @@ exports.config = {
       // 'src/features/step-definitions/registration_page_steps.js',
       // 'src/features/step-definitions/search_page_steps.js',
       // 'src/features/step-definitions/setup_page_steps.js',
-      'src/features/step-definitions/f.js'
+      'src/features/step-definitions/f_step.js'
     ],
 
     backtrace: false,
