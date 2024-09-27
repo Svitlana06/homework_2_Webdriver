@@ -11,7 +11,7 @@ Given('I am on the boards page', async () => {
     expect((await browser.getUrl()).includes(url.boards));
 });
 
-Given('I am on a Trello board', async () => {
+Given('I am on the Trello board', async () => {
     await boardPage.boardComponent.check('existedBoard').click();
 });
 
