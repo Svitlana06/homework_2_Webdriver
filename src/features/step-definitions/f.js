@@ -3,14 +3,15 @@ const { expect } = require('chai');
 const { valuesForFields } = require('../../data/data.js');
 const { BoardPage } = require('../../po/pages/imports.js');
 const boardPage = new BoardPage();
-Given('I am on a Trello board1', async () => {
+
+Given('I am here', async () => {
   await boardPage.boardComponent.check('existedBoard').click();
 });
-When('I add a new list1', async () => {
+When('I am again here', async () => {
   await boardPage.boardComponent.createBtn('list').click();
   await boardPage.boardComponent.input('list').setValue(valuesForFields.newListName);
   await boardPage.boardComponent.addBtn('list').click();
 });
-Then('a new list should be added to the board1', async () => {
+Then('I am again and again here', async () => {
   expect(await boardPage.boardComponent.check('list').isDisplayed()).to.be.true;
 });

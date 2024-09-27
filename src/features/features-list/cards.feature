@@ -11,3 +11,9 @@ Feature: Working with cards on the Trello
    Given I am on the Trello board with existed list
    When I apply a filter for specific criteria
    Then only cards matching the criteria should be displayed
+
+@login_on_the_site
+   Scenario: Creating a new list
+   Given I am on the Trello board
+   When I add a new list
+   Then a new list should be added to the board
