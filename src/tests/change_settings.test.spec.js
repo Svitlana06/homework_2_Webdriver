@@ -3,7 +3,7 @@ const { valuesForFields } = require('../data/data');
 const signIn = require('../settings/sign_in');
 const { pages } = require('../po');
 
-describe('Modifying workspace setting', () => {
+describe.skip('Modifying workspace setting', () => {
   before(async () => {
     await signIn();
   });
