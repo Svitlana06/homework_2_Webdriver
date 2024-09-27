@@ -13,7 +13,6 @@ Given('I am on the profile settings page', async () => {
 
 When('I update my profile information', async () => {
   await accountPage.profileVisabilityComponent.changeUsername.setValue(valuesForFields.newUserName);
-
   await accountPage.profileVisabilityComponent.saveBtn.click();
 
   await browser.waitUntil(
