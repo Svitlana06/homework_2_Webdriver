@@ -14,9 +14,6 @@ Given('I am on the boards page', async () => {
 Given('I am on the Trello board', async () => {
     await boardPage.boardComponent.check('existedBoard').click();
 });
-Given('I am on the Trello board with existed list', async () => {
-    await boardPage.boardComponent.check('existedBoard').click();
-});
 
 When('I add a new card', async () => {
     await boardPage.boardComponent.createBtn('card').click();
@@ -35,6 +32,10 @@ When('I apply a filter for specific criteria', async () => {
             timeout: 15000,
         }
     );
+});
+
+Given('I am on the Trello board with existed list', async () => {
+    await boardPage.boardComponent.check('existedBoard').click();
 });
 
 When('I add a new list', async () => {
