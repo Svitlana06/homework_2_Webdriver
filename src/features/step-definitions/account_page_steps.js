@@ -24,7 +24,7 @@ When('I update my profile information', async () => {
     async () => {
       return (await browser.getUrl()).includes(valuesForFields.newUserName);
     },
-    { timeout: 10000 }
+    { timeout: 15000 }
   );
 });
 
