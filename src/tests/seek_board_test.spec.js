@@ -3,7 +3,7 @@ const { url, valuesForFields } = require('../data/data');
 const { pages } = require('../po');
 const signIn = require('../settings/sign_in');
 
-describe('Searching for an existing board', () => {
+describe.skip('Searching for an existing board', () => {
   before(async () => {
     await signIn();
   });

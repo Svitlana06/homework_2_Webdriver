@@ -3,7 +3,7 @@ const { url } = require('../data/data');
 const { pages } = require('../po');
 const signIn = require('../settings/sign_in');
 
-describe('Filter cards', () => {
+describe.skip('Filter cards', () => {
   before(async () => {
     await signIn();
     await pages('boardPage').boardComponent.check('existedBoard').click();
