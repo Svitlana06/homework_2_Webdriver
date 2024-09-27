@@ -9,8 +9,7 @@ Given('I am here', async () => {
 });
 When('I am again here', async () => {
   await boardPage.boardComponent.createBtn('list').click();
-  console.log("НАТИСНУЛА НА КНОПКУ")
-  await boardPage.boardComponent.input('list').setValue("ooooOO");
+  await boardPage.boardComponent.input('list').setValue(valuesForFields.newListName);
   await boardPage.boardComponent.addBtn('list').click();
 });
 Then('I am again and again here', async () => {
