@@ -40,6 +40,9 @@ Given('I am on the Trello board with existed list', async () => {
 
 When('I add a new list', async () => {
     await boardPage.boardComponent.createBtn('list').click();
+    await boardPage.boardComponent.input('list').waitForDisplayed({
+        timeout: 12000,
+      });
     await boardPage.boardComponent.input('list').setValue(valuesForFields.newListName);
     await boardPage.boardComponent.addBtn('list').click();
 });
