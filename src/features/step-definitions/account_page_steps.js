@@ -18,6 +18,8 @@ When('I update workspace details', async () => {
 When('I update my profile information', async () => {
   await accountPage.profileVisabilityComponent.changeUsername.setValue(valuesForFields.newUserName);
 
+  await accountPage.profileVisabilityComponent.saveBtn.isDisplayed();
+
   await accountPage.profileVisabilityComponent.saveBtn.click();
 
   await browser.waitUntil(
