@@ -41,7 +41,7 @@ exports.config = {
 
     backtrace: false,
     requireModule: [],
-    tags: ['@login_on_the_site'],
+    tags: ['@login'],
     timeout: 60000,
     ignoreUndefinedDefinitions: false,
   },

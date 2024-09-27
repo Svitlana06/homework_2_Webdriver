@@ -1,6 +1,6 @@
 Feature: Working with lists on the Trello
 
-@login_on_the_site
+@login
    Scenario: O yes
    Given I am here
    When I am again here
