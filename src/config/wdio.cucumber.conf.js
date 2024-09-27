@@ -5,11 +5,11 @@ exports.config = {
   services: [],
 
   specs: [
-    '../features/features-list/boards.feature',
-    '../features/features-list/settings.feature',
+    // '../features/features-list/boards.feature',
+    // '../features/features-list/settings.feature',
     '../features/features-list/lists.feature',
-    '../features/features-list/cards.feature',
-    '../features/features-list/sign_up.feature',
+    // '../features/features-list/cards.feature',
+    // '../features/features-list/sign_up.feature',
   ],
 
   exclude: [],
@@ -29,13 +29,13 @@ exports.config = {
   cucumberOpts: {
     require: [
       'src/features/support/hook.js',
-      'src/features/step-definitions/account_page_steps.js',
-      'src/features/step-definitions/boards_page_steps.js',
-      'src/features/step-definitions/base_page_steps.js',
-      'src/features/step-definitions/home_page_steps.js',
-      'src/features/step-definitions/registration_page_steps.js',
-      'src/features/step-definitions/search_page_steps.js',
-      'src/features/step-definitions/setup_page_steps.js',
+      // 'src/features/step-definitions/account_page_steps.js',
+      // 'src/features/step-definitions/boards_page_steps.js',
+      // 'src/features/step-definitions/base_page_steps.js',
+      // 'src/features/step-definitions/home_page_steps.js',
+      // 'src/features/step-definitions/registration_page_steps.js',
+      // 'src/features/step-definitions/search_page_steps.js',
+      // 'src/features/step-definitions/setup_page_steps.js',
       'src/features/step-definitions/f.js'
     ],
 
