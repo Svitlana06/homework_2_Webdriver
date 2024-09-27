@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
-const { url } = require('./settings');
+const { url } = require('../data/data');
 const { pages } = require('../po');
-const signIn = require('./sign_in');
+const signIn = require('../settings/sign_in');
 
 describe('Filter cards', () => {
   before(async () => {

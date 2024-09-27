@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const { inputData, url } = require('./settings');
+const { inputData, url } = require('../data/data');
 const { pages } = require('../po');
 
 async function signIn() {

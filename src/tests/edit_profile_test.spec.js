@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
-const { valuesForFields } = require('./settings');
+const { valuesForFields } = require('../data/data');
 const { pages } = require('../po');
-const signIn = require('./sign_in');
+const signIn = require('../settings/sign_in');
 
 describe('Editing the user profile', () => {
   before(async () => {
